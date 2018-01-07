@@ -36,6 +36,10 @@ object QuantileDiscretizerExample {
     // Output of QuantileDiscretizer for such small datasets can depend on the number of
     // partitions. Here we force a single partition to ensure consistent results.
     // Note this is not necessary for normal use cases
+<<<<<<< HEAD
+=======
+      .repartition(1)
+>>>>>>> 9a2b65a3c0c36316aae0a53aa0f61c5044c2ceff
 
     // $example on$
     val discretizer = new QuantileDiscretizer()

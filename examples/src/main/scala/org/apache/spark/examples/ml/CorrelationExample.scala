@@ -51,10 +51,17 @@ object CorrelationExample {
 
     val df = data.map(Tuple1.apply).toDF("features")
     val Row(coeff1: Matrix) = Correlation.corr(df, "features").head
+<<<<<<< HEAD
     println(s"Pearson correlation matrix:\n ${coeff1.toString}")
 
     val Row(coeff2: Matrix) = Correlation.corr(df, "features", "spearman").head
     println(s"Spearman correlation matrix:\n ${coeff2.toString}")
+=======
+    println(s"Pearson correlation matrix:\n $coeff1")
+
+    val Row(coeff2: Matrix) = Correlation.corr(df, "features", "spearman").head
+    println(s"Spearman correlation matrix:\n $coeff2")
+>>>>>>> 9a2b65a3c0c36316aae0a53aa0f61c5044c2ceff
     // $example off$
 
     spark.stop()
